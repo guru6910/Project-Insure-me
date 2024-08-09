@@ -36,9 +36,9 @@ $\color{red} \textbf{NOTE :}$ When start Using the Jenkins.
 
 $\color{green} \textbf{6. Install Plugins.}$
 $\color{purple} \textbf{Dashboard > Manage jenkins > Plugins}$
-1.Maven Integration
 
-2.Docker
+1. Maven Integration
+2. Docker
 
 3.Docker Commons
 
