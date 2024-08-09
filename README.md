@@ -37,10 +37,15 @@ $\color{red} \textbf{NOTE :}$ When start Using the Jenkins.
 $\color{green} \textbf{6. Install Plugins.}$
 $\color{purple} \textbf{Dashboard > Manage jenkins > Plugins}$
 1.Maven Integration
+
 2.Docker
+
 3.Docker Commons
+
 4.Docker Pipeline
+
 5.Docker API
+
 6.docker-build-step
 
 $\color{green} \textbf{7. Add it in tool.}$
