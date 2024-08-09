@@ -67,7 +67,7 @@ $\color{red} \textbf{NOTE : }$ My pipeline code is in "Jenkinsfile".
 - Apply & save
 - Build Now
 
-$\color{green} \textbf{10. Host the Public ip with server post
+$\color{green} \textbf{10. Host the Public ip with server post}$
 
 
 ![image](https://github.com/user-attachments/assets/1a07d912-6fca-4225-9cd5-2c9b1d094008)
