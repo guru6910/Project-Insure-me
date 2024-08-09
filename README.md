@@ -20,22 +20,22 @@ sudo apt-get update
 sudo apt-get install jenkins
 ````
 
-$\color{green} /textbf{3. Host the public ip of instance with jenkins port.}
+$\color{green} /textbf{3. Host the public ip of instance with jenkins port.}$
 ````
 pub_ip:8080
 ````
-4. Add jenkins passwd.
+$\color{green} /textbf{4. Add jenkins passwd.}$
 ````
 sudo cat /var/jenkins_home/secrets/initialAdminPassword
 ````
-5. Create User and Login with User.
+$\color{green} /textbf{5. Create User and Login with User.}$
 - user : Guru
 - passwd : <space>
 
 NOTE : When start Using the Jenkins.
 
-6. Install Plugins.
-Dashboard > Manage jenkins > Plugins
+$\color{green} /textbf{6. Install Plugins.}$
+$\color{purple} /textbf{Dashboard > Manage jenkins > Plugins}$
 1.Maven Integration
 2.Docker
 3.Docker Commons
@@ -43,5 +43,5 @@ Dashboard > Manage jenkins > Plugins
 5.Docker API
 6.docker-build-step
 
-7. Add it in tool.
+$\color{green} /textbf{7. Add it in tool.}$
 - 
