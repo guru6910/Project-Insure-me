@@ -1,43 +1,41 @@
 pipeline {
-    
-     agent any
+    agent any
+    tools {
+        maven 'maven'
+    }
 
     stages {
-        stage('Code-Checkout') {
+        stage('Checkout') {
             steps {
-               checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'github', url: 'https://github.com/kajol2699/insurance.git']])
+                git branch: 'main', url: 'https://github.com/abhipraydhoble/Project-InsureMe.git'
             }
         }
-        
+
         stage('Code-Build') {
             steps {
-               sh 'mvn clean package'
+                sh 'mvn clean package'
             }
         }
         
-        stage('Containerize the application'){
-            steps { 
-               echo 'Creating Docker image'
-               sh "docker build -t kaju912/insurance:latest ."
+        stage('Docker-Build') {
+            steps {
+                sh 'docker build -t guru6910/project:p1 .'
             }
         }
         
-        stage('Docker Push') {
-    	agent any
-          steps {
-       	withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'dockerHubPassword', usernameVariable: 'dockerHubUser')]) {
-            	sh "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPassword}"
-                sh 'docker push kaju912/insurance:latest'
+        stage('Docker-Push') {
+            steps {
+                withCredentials([usernamePassword(credentialsId: 'docker_id', passwordVariable: 'passwd', usernameVariable: 'uname')]) {
+                    sh "docker login -u ${env.uname} -p ${env.passwd}"
+                    sh 'docker push guru6910/project:p1'
+                }
+            }
+        }
+        
+        stage('Code-Deploy') {
+        steps {
+           sh 'docker run -d -p 8089:8081 guru6910/project:p1'
         }
       }
     }
-    
-      
-     stage('Code-Deploy') {
-        steps {
-           ansiblePlaybook credentialsId: 'ansible', installation: 'ansible', playbook: 'ansible-playbook.yml', vaultTmpPath: ''       
-        }
-      }
-   }
 }
-
