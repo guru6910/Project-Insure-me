@@ -60,7 +60,12 @@ $\color{green} \textbf{8. Create New Pipeline to click on " New Item"}$
 
 ![image](https://github.com/user-attachments/assets/a212d4dd-8c94-431f-a74e-f3f0c8171179)
 
-$\color{green} \textbf{9. 
+$\color{green} \textbf{9. Add code in Pipeline}$
+
+$\color{red} \textbf{NOTE : }$ My pipeline code is in "Jenkinsfile". 
+
+- Apply & save
+- Build 
 
 
 
