@@ -1,1 +1,47 @@
 # $\color{red} \textbf{PROJECT-Jenkins-InsureMe}$
+
+1. Craete A instance.
+- ubuntu
+- t2.medium
+- SG : All traffic
+- Storage : 20
+
+2. Install Java and jenkins.
+````
+sudo apt update
+sudo apt install fontconfig openjdk-17-jre
+java -version
+sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
+  https://pkg.jenkins.io/debian/jenkins.io-2023.key
+echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" \
+  https://pkg.jenkins.io/debian binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo apt-get update
+sudo apt-get install jenkins
+````
+
+3. Host the public ip of instance with jenkins port.
+````
+pub_ip:8080
+````
+4. Add jenkins passwd.
+````
+sudo cat /var/jenkins_home/secrets/initialAdminPassword
+````
+5. Create User and Login with User.
+- user : Guru
+- passwd : <space>
+
+NOTE : When start Using the Jenkins.
+
+6. Install Plugins.
+Dashboard > Manage jenkins > Plugins
+1.Maven Integration
+2.Docker
+3.Docker Commons
+4.Docker Pipeline
+5.Docker API
+6.docker-build-step
+
+7. Add it in tool.
+- 
