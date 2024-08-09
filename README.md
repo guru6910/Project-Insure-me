@@ -1,12 +1,12 @@
 # $\color{red} \textbf{PROJECT-Jenkins-InsureMe}$
 
-1. Craete A instance.
+$\color {green} \textbf{1. Craete A instance.}$
 - ubuntu
 - t2.medium
 - SG : All traffic
 - Storage : 20
 
-2. Install Java and jenkins.
+$\color{green} \textbf{2. Install Java and jenkins.}$
 ````
 sudo apt update
 sudo apt install fontconfig openjdk-17-jre
@@ -20,7 +20,7 @@ sudo apt-get update
 sudo apt-get install jenkins
 ````
 
-3. Host the public ip of instance with jenkins port.
+$\color{green} /textbf{3. Host the public ip of instance with jenkins port.}
 ````
 pub_ip:8080
 ````
